@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduBot AI</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="background"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+
+<div class="app">
+<aside class="sidebar">
+  <div class="brand">
+    <div class="brand-icon">🎓</div>
+    <div><h1>EduBot AI</h1><span>Smart Learning Assistant</span></div>
+  </div>
+
+  <button id="newChatBtn" class="new-chat-btn">＋ New Chat</button>
+  <div class="sidebar-title">Learning Tools</div>
+
+  <button class="tool-btn" data-prompt="Explain this topic in simple language.">📚 Explain Topic</button>
+  <button class="tool-btn" data-prompt="Give me important exam questions for this subject.">📝 Exam Questions</button>
+  <button class="tool-btn" data-prompt="Create a simple study plan for me.">📅 Study Plan</button>
+  <button class="tool-btn" data-prompt="Give me important viva questions and answers.">🎤 Viva Preparation</button>
+  <button class="tool-btn" data-prompt="Give me a beginner-friendly programming example.">💻 Coding Help</button>
+
+  <div class="sidebar-bottom"><div class="status"><span class="status-dot"></span> EduBot AI Online</div></div>
+</aside>
+
+<main class="main">
+<header class="header">
+  <div><h2>EduBot AI</h2><p>Your personal AI learning companion</p></div>
+  <button id="clearBtn" class="clear-btn">🗑 Clear</button>
+</header>
+
+<section id="chat" class="chat">
+  <div id="welcome" class="welcome">
+    <div class="welcome-icon">🤖</div>
+    <h1>Hi! I'm EduBot AI 👋</h1>
+    <p>Ask me anything about your studies, programming, exams, projects or learning.</p>
+
+    <div class="quick-grid">
+      <button class="quick-card" data-prompt="Explain Artificial Intelligence in simple words."><span>🤖</span><strong>Learn AI</strong><small>Simple AI explanation</small></button>
+      <button class="quick-card" data-prompt="Teach me Python from beginner level."><span>🐍</span><strong>Learn Python</strong><small>Start from basics</small></button>
+      <button class="quick-card" data-prompt="Give me a study plan for my upcoming exams."><span>📖</span><strong>Study Plan</strong><small>Plan my preparation</small></button>
+      <button class="quick-card" data-prompt="Give me a final year AI project idea with modules."><span>🚀</span><strong>Project Ideas</strong><small>AI project suggestions</small></button>
+    </div>
+  </div>
+
+  <div id="messages" class="messages"></div>
+
+  <div id="typing" class="typing hidden">
+    <div class="bot-avatar">🤖</div>
+    <div class="typing-box"><span></span><span></span><span></span></div>
+    <span>EduBot is thinking...</span>
+  </div>
+</section>
+
+<footer class="input-area">
+  <div class="input-wrapper">
+    <textarea id="messageInput" rows="1" placeholder="Ask EduBot anything..."></textarea>
+    <button id="sendBtn" class="send-btn" title="Send">➤</button>
+  </div>
+  <div class="input-info">
+    <span>EduBot AI can make mistakes. Verify important information.</span>
+    <span>Press Enter to send</span>
+  </div>
+</footer>
+</main>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
